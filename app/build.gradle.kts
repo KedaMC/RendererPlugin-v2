@@ -13,7 +13,7 @@ plugins {
 }
 
 android {
-    namespace = "com.keda.ltw.renderer"
+    namespace = "com.launchers_plugin.renderer"
     compileSdk = 34
 
     defaultConfig {
