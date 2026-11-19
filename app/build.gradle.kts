@@ -17,7 +17,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.keda.ltw.renderer"
+        applicationId = "com.keda.ltw.angle.renderer"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -40,13 +40,13 @@ android {
             isShrinkResources = true
         }
         configureEach {
-            resValue("string", "app_name", "LTW Renderer")
-            applicationIdSuffix = ".ltw"
+            resValue("string", "app_name", "LTW + ANGLE")
+            applicationIdSuffix = ".ltw.angle"
 
             // RendererPlugin V2 configuration.
             resValue("string", "config", buildJsonValue {
                 renderer(
-                    displayName = "LTW Renderer",
+                    displayName = "LTW + ANGLE from Mojo",
                     rendererId = "opengles3",
                     rendererGLPath = "libltw.so",
                     rendererEGLPath = nativePath("libltw.so"),
@@ -61,8 +61,8 @@ android {
 
             // Legacy V1 metadata for launchers that do not yet read V2.
             manifestPlaceholders.putAll(legacyManifest {
-                displayName = "LTW Renderer"
-                rendererName = "LTW Renderer"
+                displayName = "LTW + ANGLE from Mojo"
+                rendererName = "LTW + ANGLE"
                 rendererLib = "libltw.so"
                 eglLib = "/libltw.so"
                 minMCVer = ""
