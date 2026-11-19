@@ -17,7 +17,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.keda.ltw.angle.renderer"
+        applicationId = "com.keda.ltwangle.mojo"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -41,7 +41,6 @@ android {
         }
         configureEach {
             resValue("string", "app_name", "LTW + ANGLE")
-            applicationIdSuffix = ".ltw.angle"
 
             // RendererPlugin V2 configuration.
             resValue("string", "config", buildJsonValue {
